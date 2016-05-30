@@ -23,6 +23,5 @@ class DrawerListLayout(context: Context?, attrs: AttributeSet?) : LinearLayout(c
     }
 
     fun bindViews(topDrawerEntity: TopDrawerEntity,position:Int){
-        if(position)
     }
 }

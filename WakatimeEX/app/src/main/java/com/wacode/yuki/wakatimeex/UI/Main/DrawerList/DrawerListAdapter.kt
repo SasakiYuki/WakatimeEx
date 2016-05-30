@@ -17,7 +17,7 @@ class DrawerListAdapter(context: Context?, resource: Int, objects: MutableList<T
     private val resource:Int
 
     init {
-        layoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        layoutInflater = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         this.resource = resource
     }
 
@@ -28,7 +28,7 @@ class DrawerListAdapter(context: Context?, resource: Int, objects: MutableList<T
             convertView as DrawerListLayout
         }
 
-        view.bindViews()
+        view.bindViews(getItem(position),position)
         return view
     }
 }
