@@ -9,4 +9,7 @@
     <color name="colorBlack">#263238</color>
     <color name="colorLightSkyBlue">#e1ffff</color>
     <color name="colorLightBlack">#4f5b69</color>
+    <color name="colorGreen">#5CB85C</color>
+
+    <color name="toolBarBackGround">#fff</color>
 </resources>

@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.wacode.yuki.wakatimeex.UI.Auth.AuthActivity">
-    <Button
+    <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button"/>
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/toolBar"
+        android:background="@color/toolBarBackGround"
+        ></android.support.v7.widget.Toolbar>
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/layout_cardView_margin_top"
+        android:layout_marginLeft="@dimen/layout_carView_margin_left"
+        android:layout_marginRight="@dimen/layout_carView_margin_left"
+        android:layout_marginTop="@dimen/layout_cardView_margin_top"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightBlack"
+                android:text="@string/oauth_text"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:textSize="@dimen/textSize_normal"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/layout_cardView_padding">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button"
+                    android:background="@color/colorGreen"
+                    android:text="@string/oauth_text2"
+                    android:textColor="@color/colorWhite"/>
+                </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 
-</RelativeLayout>
+</LinearLayout>
