@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wacode.yuki.wakatimeex.UI.BasicFeatures.BasicFeaturesLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/layout_basic_wakaactivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/wakaactivity"></include>
+    <include
+        layout="@layout/layout_basic_daily"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/daily"/>
+    <include
+        layout="@layout/layout_basic_editors"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/editors"/>
+    <include
+        layout="@layout/layout_basic_languages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/languages"/>
+</com.wacode.yuki.wakatimeex.UI.BasicFeatures.BasicFeaturesLayout>

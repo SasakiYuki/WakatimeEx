@@ -29,6 +29,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.jakewharton:kotterknife:0.1.0-SNAPSHOT'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile 'com.android.support:design:23.2.1'
 }
 repositories {
     mavenCentral()

@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">WakatimeEX</string>
+    <string name="pagertitle_wakaactivity">Activity</string>
+    <string name="pagertitle_daily">Daily</string>
+    <string name="pagertitle_editors">Editors</string>
+    <string name="pagettitle_languages">Language</string>
+
+
+    <string name="navigation_1">メイン</string>
+    <string name="navigation_2">ソーシャル</string>
+    <string name="navigation_3">プロモーション</string>
+    <string name="navigation_4">スター付き</string>
+    <string name="navigation_5">重要</string>
+    <string name="navigation_6">その他</string>
 </resources>
