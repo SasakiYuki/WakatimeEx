@@ -1,11 +1,9 @@
 package com.wacode.yuki.wakatimeex.UI.Auth
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
-import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import butterknife.bindView
@@ -16,7 +14,7 @@ import shimbaroid.wakalib.Authorization
 import shimbaroid.wakalib.ScopeBuilder
 import shimbaroid.wakalib.Scopes
 import shimbaroid.wakalib.network.OnGetAccessTokenCallback
-import wacode.yuki.newontapusha.Utils.PrefUtils
+import wacode.yuki.wakatimeex.PrefUtils
 
 class AuthActivity : AppCompatActivity() {
 

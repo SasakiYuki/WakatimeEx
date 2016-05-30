@@ -9,7 +9,7 @@ import android.view.Menu
 import android.view.MenuItem
 import butterknife.bindView
 import com.wacode.yuki.wakatimeex.UI.Auth.AuthActivity
-import wacode.yuki.newontapusha.Utils.PrefUtils
+import wacode.yuki.wakatimeex.PrefUtils
 
 class MainActivity : AppCompatActivity() {
     private val toolBar:Toolbar by bindView(R.id.toolBar)

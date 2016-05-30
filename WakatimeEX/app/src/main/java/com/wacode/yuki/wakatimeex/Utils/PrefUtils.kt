@@ -1,9 +1,8 @@
-package wacode.yuki.newontapusha.Utils
+package wacode.yuki.wakatimeex
 
 import android.content.Context
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
-import android.util.Log
 
 /**
  * Created by Yuki on 2016/03/15.
