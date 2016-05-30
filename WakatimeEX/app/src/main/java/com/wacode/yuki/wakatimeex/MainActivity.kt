@@ -4,6 +4,9 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.Toolbar
+import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import butterknife.bindView
 import com.wacode.yuki.wakatimeex.UI.Auth.AuthActivity
 import wacode.yuki.newontapusha.Utils.PrefUtils
@@ -29,8 +32,25 @@ class MainActivity : AppCompatActivity() {
 
     private fun wantOAuthed() = PrefUtils[this, PREFKEY_WANTOAUTH,true]
 
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menu.add(0,MENU_SETTING,0,resources.getString(R.string.main_profile))
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            MENU_SETTING -> intentProfile()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun intentProfile(){
+        Log.d("saru","saru")
+    }
+
     companion object{
         val PREFKEY_WANTOAUTH = "PrefKey_want_Oauthed"
+        private  val MENU_SETTING = 0
     }
 
 }

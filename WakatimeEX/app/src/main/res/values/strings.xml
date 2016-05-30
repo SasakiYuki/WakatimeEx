@@ -10,10 +10,5 @@
     <string name="oauth_text2">Start OAuth</string>
     <string name="oauth_text_success">成功しました</string>
 
-    <string name="navigation_1">メイン</string>
-    <string name="navigation_2">ソーシャル</string>
-    <string name="navigation_3">プロモーション</string>
-    <string name="navigation_4">スター付き</string>
-    <string name="navigation_5">重要</string>
-    <string name="navigation_6">その他</string>
+    <string name="main_profile">profile</string>
 </resources>
