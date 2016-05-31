@@ -13,7 +13,11 @@
 
     <string name="oauth_text">Please OAuth</string>
     <string name="oauth_text2">Start OAuth</string>
-    <string name="oauth_text_success">æˆåŠŸã—ã¾ã—ãŸ</string>
+    <string name="oauth_text_success">¬Œ÷‚µ‚Ü‚µ‚½</string>
+
+    <string name="createTeam_icon_error">‰æ‘œ‚ð‘I‘ð‚µ‚Ä‚­‚¾‚³‚¢</string>
+    <string name="createTeam_name_error">1`32•¶ŽšˆÈ“à‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢</string>
+    <string name="createTeam_description_error">1`2048•¶ŽšˆÈ“à‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢</string>
 
     <string name="main_profile">profile</string>
 </resources>
