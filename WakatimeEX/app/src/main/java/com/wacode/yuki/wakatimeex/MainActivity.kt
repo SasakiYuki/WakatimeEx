@@ -9,7 +9,6 @@ import android.view.Menu
 import android.view.MenuItem
 import butterknife.bindView
 import com.wacode.yuki.wakatimeex.UI.Auth.AuthActivity
-import com.wacode.yuki.wakatimeex.UI.Profile.ProfileMainActivity
 import wacode.yuki.wakatimeex.PrefUtils
 
 class MainActivity : AppCompatActivity() {
@@ -46,8 +45,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun intentProfile(){
-        val intent = Intent(this,ProfileMainActivity::class.java)
-        startActivity(intent)
+        Log.d("saru","saru")
     }
 
     companion object{
