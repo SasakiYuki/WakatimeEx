@@ -26,6 +26,8 @@
                 <data android:scheme="kaburazushi" android:host="wakalib"/>
             </intent-filter>
         </activity>
+        <activity android:name=".UI.Profile.ProfileMainActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

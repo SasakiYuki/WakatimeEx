@@ -5,6 +5,11 @@
     <string name="pagertitle_daily">Daily</string>
     <string name="pagertitle_editors">Editors</string>
     <string name="pagettitle_languages">Language</string>
+    
+    <string name="profile_follow">フォロー</string>
+    <string name="profile_follower">フォロワー</string>
+    <string name="profile_joinTeam">参加チーム</string>
+    <string name="profile_allTeam">チームを全て表示</string>
 
     <string name="oauth_text">Please OAuth</string>
     <string name="oauth_text2">Start OAuth</string>
