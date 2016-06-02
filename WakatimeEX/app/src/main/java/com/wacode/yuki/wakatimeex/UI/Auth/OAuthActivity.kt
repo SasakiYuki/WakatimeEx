@@ -17,7 +17,7 @@ import shimbaroid.wakalib.Scopes
 import shimbaroid.wakalib.network.OnGetAccessTokenCallback
 import wacode.yuki.wakatimeex.PrefUtils
 
-class AuthActivity : AppCompatActivity() {
+class OAuthActivity : AppCompatActivity() {
 
     private val button:Button by bindView(R.id.button)
 

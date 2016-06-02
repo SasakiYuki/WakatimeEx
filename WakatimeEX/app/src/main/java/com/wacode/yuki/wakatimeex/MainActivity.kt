@@ -8,7 +8,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import butterknife.bindView
-import com.wacode.yuki.wakatimeex.UI.Auth.AuthActivity
+import com.wacode.yuki.wakatimeex.UI.Auth.OAuthActivity
 import com.wacode.yuki.wakatimeex.UI.Profile.ProfileMainActivity
 import wacode.yuki.wakatimeex.PrefUtils
 
@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setToolbar()
         if(wantOAuthed()) {
-            val intent = Intent(this, AuthActivity::class.java)
+            val intent = Intent(this, OAuthActivity::class.java)
             startActivity(intent)
         }
     }
