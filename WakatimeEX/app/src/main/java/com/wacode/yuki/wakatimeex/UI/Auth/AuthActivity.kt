@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
+import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import butterknife.bindView
@@ -51,7 +52,7 @@ class AuthActivity : AppCompatActivity() {
 
     private val callback = OnGetAccessTokenCallback{ responseData ->
         PrefUtils.put(this,PREF_ACCESSTOKEN,responseData.access_token)
-        PrefUtils.put(this,MainActivity.PREFKEY_WANTOAUTH,false)
+        Log.d("saruman",responseData.access_token)
         Toast.makeText(this,resources.getString(R.string.oauth_text_success),Toast.LENGTH_SHORT).show()
         finish()
     }
@@ -59,8 +60,8 @@ class AuthActivity : AppCompatActivity() {
     companion object{
         private val TAG = this.javaClass.simpleName
 
-        private val APPKEY = "PUlb8UrbhbgLp2cdoNsAmLEK"
-        private val SECRETID = "sec_4QRgLueMtuZ2-FDucpmLAOAEhTDYqzFoWFLf0dUrf3JwbfBkiW7O-MDVmjOVRmHy6-E6PvSudaE-ifbF"
+        private val APPKEY = "dA-zVcce7iWSyGo6KD9iJ4NS"
+        private val SECRETID = "sec_Ixdzu-mBFd7kD0HACHa-CF39zEw2m_f_Hak2evZ8kMMqBdV8znV68U-x5hxdwTXSYvV9qkd_zqHN3HSw"
         private val REDIRECTURI ="kaburazushi://wakalib"
         private val REQUESTTYPE = "code"
 
