@@ -1,7 +1,5 @@
 package com.wacode.yuki.wakatimeex.UI.Profile;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -19,6 +17,7 @@ import android.widget.TextView;
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
+import com.wacode.yuki.wakatimeex.Entity.TeamDataEntity;
 import com.wacode.yuki.wakatimeex.R;
 import com.wacode.yuki.wakatimeex.UI.Profile.TransFormImage.RoundedTransformation;
 
@@ -68,20 +67,20 @@ public class ProfileMainActivity extends AppCompatActivity{
     };
 
     private void setViewsEndFromSyncGet(){
-        ImageView imageView_icon = (ImageView)findViewById(R.id.imageView_icon);
-        TextView textView_userName = (TextView)findViewById(R.id.textView_name);
-        TextView textView_location = (TextView)findViewById(R.id.textView_location);
-        TextView textView_webSite = (TextView)findViewById(R.id.textView_webSite);
-        TextView textView_follow = (TextView)findViewById(R.id.textView_follow);
-        TextView textView_follower = (TextView)findViewById(R.id.textView_follower);
-        LinearLayout linearLayout_moreTeams = (LinearLayout)findViewById(R.id.linerLayout_moreTeam);
+        ImageView imageViewIcon = (ImageView)findViewById(R.id.imageView_icon);
+        TextView textViewUserName = (TextView)findViewById(R.id.textView_name);
+        TextView textViewLocation = (TextView)findViewById(R.id.textView_location);
+        TextView textViewWebSite = (TextView)findViewById(R.id.textView_webSite);
+        TextView textViewFollow = (TextView)findViewById(R.id.textView_follow);
+        TextView textViewFollower = (TextView)findViewById(R.id.textView_follower);
+        LinearLayout linearLayoutMoreTeams = (LinearLayout)findViewById(R.id.linerLayout_moreTeam);
 
-//        setIconFromUrl(imageView_icon,url);
-        textView_userName.setText("名前");
-        textView_location.setText("場所");
-        textView_webSite.setText("URL");
-        textView_follow.setText("人");
-        textView_follower.setText("人");
+//        setIconFromUrl(imageViewIcon,url);
+        textViewUserName.setText("名前");
+        textViewLocation.setText("場所");
+        textViewWebSite.setText("URL");
+        textViewFollow.setText("人");
+        textViewFollower.setText("人");
 
 //        if (count > 6){
 //            linearLayout_moreTeams.setVisibility(View.VISIBLE);
@@ -108,18 +107,11 @@ public class ProfileMainActivity extends AppCompatActivity{
 
     }
 
-    private ArrayList<TeamData> createTeamListFromApi(){
-        ArrayList<TeamData> list = new ArrayList<>();
+    private ArrayList<TeamDataEntity> createTeamListFromApi(){
+        ArrayList<TeamDataEntity> list = new ArrayList<>();
         return list;
     }
 
-    private Bitmap getIconFromByte(byte[] data){
-        Bitmap icon = null;
-        if (data != null){
-            icon = BitmapFactory.decodeByteArray(data,0,data.length);
-        }
-        return icon;
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -132,5 +124,10 @@ public class ProfileMainActivity extends AppCompatActivity{
                 result = super.onOptionsItemSelected(item);
         }
         return result;
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
     }
 }
