@@ -15,4 +15,5 @@
     <color name="toolBarBackGround">#fff</color>
     <color name="trimBitmapWindow">#1c1c1c</color>
     <color name="trimBitmapToolBar">#e91c1c1c</color>
+    <color name="colorDialogTitle">#2196F3</color>
 </resources>

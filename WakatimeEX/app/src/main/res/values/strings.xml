@@ -6,18 +6,21 @@
     <string name="pagertitle_editors">Editors</string>
     <string name="pagettitle_languages">Language</string>
     
-    <string name="profile_follow">�t�H���[</string>
-    <string name="profile_follower">�t�H�����[</string>
-    <string name="profile_joinTeam">�Q���`�[��</string>
-    <string name="profile_allTeam">�`�[����S�ĕ\��</string>
+    <string name="profile_follow">フォロー</string>
+    <string name="profile_follower">フォロワー</string>
+    <string name="profile_joinTeam">参加チーム</string>
+    <string name="profile_allTeam">チームを全て表示</string>
 
     <string name="oauth_text">Please OAuth</string>
     <string name="oauth_text2">Start OAuth</string>
-    <string name="oauth_text_success">�������܂���</string>
+    <string name="oauth_text_success">成功しました</string>
 
-    <string name="createTeam_icon_error">�摜��I�����Ă�������</string>
-    <string name="createTeam_name_error">1�`32�����ȓ��œ��͂��Ă�������</string>
-    <string name="createTeam_description_error">1�`2048�����ȓ��œ��͂��Ă�������</string>
+    <string name="createTeam_icon_error">チームアイコンのカラーを選択してください</string>
+    <string name="createTeam_name_error">1～32文字以内で入力してください</string>
+    <string name="createTeam_description_error">1～2048文字以内で入力してください</string>
+    <string name="createTeam_colorPickDialog_title">カラーを選択してください</string>
+    <string name="createTeam_backPressDialog_title">画面を移動しますか？</string>
+    <string name="createTeam_backPress_message">ここまでの編集内容は破棄されます</string>
 
     <string name="main_profile">profile</string>
 </resources>

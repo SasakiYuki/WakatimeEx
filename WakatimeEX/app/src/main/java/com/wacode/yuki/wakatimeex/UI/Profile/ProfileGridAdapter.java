@@ -8,9 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.MemoryPolicy;
-import com.squareup.picasso.NetworkPolicy;
-import com.squareup.picasso.Picasso;
+import com.wacode.yuki.wakatimeex.Entity.TeamDataEntity;
 import com.wacode.yuki.wakatimeex.R;
 
 import java.util.List;
@@ -18,11 +16,11 @@ import java.util.List;
 /**
  * Created by Riberd on 2016/05/30.
  */
-public class ProfileGridAdapter extends ArrayAdapter<TeamData>{
+public class ProfileGridAdapter extends ArrayAdapter<TeamDataEntity>{
     private LayoutInflater mLayoutInflater;
     private Context mContext;
 
-    public ProfileGridAdapter(Context context, int resource, List<TeamData> objects) {
+    public ProfileGridAdapter(Context context, int resource, List<TeamDataEntity> objects) {
         super(context, resource,objects);
         mLayoutInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mContext = context;
@@ -30,7 +28,7 @@ public class ProfileGridAdapter extends ArrayAdapter<TeamData>{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        TeamData item = getItem(position);
+        TeamDataEntity item = getItem(position);
         convertView = mLayoutInflater.inflate(R.layout.item_profile_team,null);
         ImageView imageView_icon = (ImageView)convertView.findViewById(R.id.imageView_teamIcon);
         TextView textView_name = (TextView)convertView.findViewById(R.id.textView_teamName);

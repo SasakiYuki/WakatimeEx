@@ -30,8 +30,6 @@
         </activity>
         <activity android:name=".UI.Profile.ProfileMainActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".UI.CreateTeam.TrimBitmapActivity"
-            android:screenOrientation="portrait"/>
         <activity android:name=".UI.CreateTeam.CreateTeamActivity"
             android:screenOrientation="portrait"/>
     </application>
