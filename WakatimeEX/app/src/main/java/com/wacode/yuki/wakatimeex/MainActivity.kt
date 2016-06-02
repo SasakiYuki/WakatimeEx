@@ -3,6 +3,8 @@ package com.wacode.yuki.wakatimeex
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.widget.DrawerLayout
+import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
@@ -13,11 +15,13 @@ import wacode.yuki.wakatimeex.PrefUtils
 
 class MainActivity : AppCompatActivity() {
     private val toolBar:Toolbar by bindView(R.id.toolBar)
+    private val drawerLayout:DrawerLayout by bindView(R.id.drawerLayout)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setToolbar()
+        initToolBar()
         if(wantOAuthed()) {
             val intent = Intent(this, OAuthActivity::class.java)
             startActivity(intent)
@@ -47,6 +51,14 @@ class MainActivity : AppCompatActivity() {
     private fun intentProfile(){
         val intent = Intent(this,ProfileMainActivity::class.java)
         startActivity(intent)
+    }
+
+    private fun initToolBar(){
+        setSupportActionBar(toolBar)
+        val drawerToggle = ActionBarDrawerToggle(this, drawerLayout, toolBar, R.string.drawer_open, R.string.drawer_close)
+        drawerToggle.isDrawerIndicatorEnabled = true
+        drawerToggle.syncState()
+        drawerLayout.setDrawerListener(drawerToggle)
     }
 
     companion object{

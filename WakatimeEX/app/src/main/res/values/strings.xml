@@ -5,19 +5,21 @@
     <string name="pagertitle_daily">Daily</string>
     <string name="pagertitle_editors">Editors</string>
     <string name="pagettitle_languages">Language</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
     
-    <string name="profile_follow">ƒtƒHƒ[</string>
-    <string name="profile_follower">ƒtƒHƒƒ[</string>
-    <string name="profile_joinTeam">ŽQ‰Áƒ`[ƒ€</string>
-    <string name="profile_allTeam">ƒ`[ƒ€‚ð‘S‚Ä•\Ž¦</string>
+    <string name="profile_follow">ï¿½tï¿½Hï¿½ï¿½ï¿½[</string>
+    <string name="profile_follower">ï¿½tï¿½Hï¿½ï¿½ï¿½ï¿½ï¿½[</string>
+    <string name="profile_joinTeam">ï¿½Qï¿½ï¿½ï¿½`ï¿½[ï¿½ï¿½</string>
+    <string name="profile_allTeam">ï¿½`ï¿½[ï¿½ï¿½ï¿½ï¿½Sï¿½Ä•\ï¿½ï¿½</string>
 
     <string name="oauth_text">Please OAuth</string>
     <string name="oauth_text2">Start OAuth</string>
-    <string name="oauth_text_success">¬Œ÷‚µ‚Ü‚µ‚½</string>
+    <string name="oauth_text_success">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½</string>
 
-    <string name="createTeam_icon_error">‰æ‘œ‚ð‘I‘ð‚µ‚Ä‚­‚¾‚³‚¢</string>
-    <string name="createTeam_name_error">1`32•¶ŽšˆÈ“à‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢</string>
-    <string name="createTeam_description_error">1`2048•¶ŽšˆÈ“à‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢</string>
+    <string name="createTeam_icon_error">ï¿½æ‘œï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</string>
+    <string name="createTeam_name_error">1ï¿½`32ï¿½ï¿½ï¿½ï¿½ï¿½È“ï¿½ï¿½Å“ï¿½ï¿½Í‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</string>
+    <string name="createTeam_description_error">1ï¿½`2048ï¿½ï¿½ï¿½ï¿½ï¿½È“ï¿½ï¿½Å“ï¿½ï¿½Í‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</string>
 
     <string name="main_profile">profile</string>
 </resources>
