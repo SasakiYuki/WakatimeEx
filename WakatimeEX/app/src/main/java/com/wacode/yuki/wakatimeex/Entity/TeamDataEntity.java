@@ -1,11 +1,11 @@
-package com.wacode.yuki.wakatimeex.UI.Profile;
+package com.wacode.yuki.wakatimeex.Entity;
 
 import android.graphics.Bitmap;
 
 /**
  * Created by Riberd on 2016/05/30.
  */
-public class TeamData {
+public class TeamDataEntity {
     private Bitmap icon;
     private String name;
     private int status;
