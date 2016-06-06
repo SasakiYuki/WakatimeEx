@@ -91,7 +91,7 @@ public class ProfileMainActivity extends AppCompatActivity{
     private void setIconFromUrl(ImageView imageView, String url){
         RoundedTransformation transformation = new RoundedTransformation(15,0);
         Picasso.with(ProfileMainActivity.this).load(url).error(R.mipmap.ic_launcher).networkPolicy(NetworkPolicy.NO_CACHE)
-                .memoryPolicy(MemoryPolicy.NO_CACHE).fit().centerCrop().transform(transformation).rotate(90).into(imageView);
+                .memoryPolicy(MemoryPolicy.NO_CACHE).fit().centerCrop().transform(transformation).into(imageView);
     }
 
     private void setTeamGridView(){

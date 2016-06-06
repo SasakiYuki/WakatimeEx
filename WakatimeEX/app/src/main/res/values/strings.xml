@@ -23,6 +23,11 @@
     <string name="createTeam_colorPickDialog_title">カラーを選択してください</string>
     <string name="createTeam_backPressDialog_title">画面を移動しますか？</string>
     <string name="createTeam_backPress_message">ここまでの編集内容は破棄されます</string>
+    
+    <string name="teamDetail_menu_withdrawal">脱退</string>
+    <string name="teamDetail_menu_approval">承認</string>
+    <string name="teamDetail_menu_kick">キック</string>
+    <string name="teamDetail_menu_dispersion">解散</string>
 
     <string name="main_profile">profile</string>
 </resources>

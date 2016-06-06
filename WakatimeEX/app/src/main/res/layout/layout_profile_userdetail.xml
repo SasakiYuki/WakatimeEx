@@ -9,21 +9,17 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <FrameLayout
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_gravity="top|center"
-            android:layout_marginTop="-30dp"
-            android:background="@color/colorWhite">
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="@dimen/activity_vertical_margin">
             <ImageView
                 android:id="@+id/imageView_icon"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:background="@color/colorBlack"
                 android:src="@mipmap/ic_launcher" />
-        </FrameLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
