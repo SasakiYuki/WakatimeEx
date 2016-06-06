@@ -14,4 +14,7 @@
     <color name="fontColor_red">#de0202</color>
     <color name="toolBarBackGround">#fff</color>
     <color name="colorDialogTitle">#2196F3</color>
+    <color name="colorGold">#ffd700</color>
+    <color name="colorSilver">#C0C0C0</color>
+    <color name="colorBronze">#C47222</color>
 </resources>
