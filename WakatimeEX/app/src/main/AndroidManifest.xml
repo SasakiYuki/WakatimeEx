@@ -34,6 +34,10 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".UI.Team.TeamMainActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".UI.FollowRanking.FollowRankingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".UI.Search.SearchActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

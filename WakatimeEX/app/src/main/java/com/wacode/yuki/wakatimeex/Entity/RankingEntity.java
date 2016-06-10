@@ -1,5 +1,7 @@
 package com.wacode.yuki.wakatimeex.Entity;
 
+import android.graphics.drawable.ShapeDrawable;
+
 /**
  * Created by Riberd on 2016/06/02.
  */
@@ -8,6 +10,7 @@ public class RankingEntity {
     private String name;
     private String time;
     private int userId;
+    private ShapeDrawable background;
 
     public int getRank() {
         return rank;
@@ -39,5 +42,13 @@ public class RankingEntity {
 
     public void setUserId(int userId) {
         this.userId = userId;
+    }
+
+    public ShapeDrawable getBackground() {
+        return background;
+    }
+
+    public void setBackground(ShapeDrawable background) {
+        this.background = background;
     }
 }
