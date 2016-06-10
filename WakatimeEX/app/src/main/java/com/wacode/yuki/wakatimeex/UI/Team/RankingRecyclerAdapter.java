@@ -23,13 +23,11 @@ import java.util.ArrayList;
 public class RankingRecyclerAdapter extends RecyclerView.Adapter<RankingRecyclerAdapter.ViewHolder> {
     private LayoutInflater mLayoutInflater;
     private ArrayList<RankingEntity> mDataList;
-    private Context mContext;
 
     public RankingRecyclerAdapter(Context context, ArrayList<RankingEntity> dataList) {
         super();
         mLayoutInflater = LayoutInflater.from(context);
         mDataList = dataList;
-        mContext = context;
     }
 
     @Override
@@ -46,33 +44,16 @@ public class RankingRecyclerAdapter extends RecyclerView.Adapter<RankingRecycler
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        RankingEntity item =mDataList.get(position);
+        RankingEntity item = mDataList.get(position);
 
-        holder.textViewRank.setText(String.valueOf(item.getRank() +1));
-        if (position < 3){
-            holder.textViewRank.setBackground(setRankerIcon(position));
-        }
+        holder.textViewRank.setText(String.valueOf(item.getRank() + 1));
+        holder.textViewRank.setBackground(item.getBackground());
         holder.textViewName.setText(item.getName());
         holder.textViewTime.setText(item.getTime());
         holder.linearLayout.setOnClickListener(click);
         holder.linearLayout.setId(position);
     }
 
-    private ShapeDrawable setRankerIcon(int position){
-        ShapeDrawable shapeDrawable = new ShapeDrawable(new OvalShape());
-        switch (position){
-            case 0:
-                shapeDrawable.getPaint().setColor(mContext.getResources().getColor(R.color.colorGold));
-                break;
-            case 1:
-                shapeDrawable.getPaint().setColor(mContext.getResources().getColor(R.color.colorSilver));
-                break;
-            case 2:
-                shapeDrawable.getPaint().setColor(mContext.getResources().getColor(R.color.colorBronze));
-                break;
-        }
-        return shapeDrawable;
-    }
 
     private View.OnClickListener click = new View.OnClickListener() {
         @Override
@@ -91,10 +72,10 @@ public class RankingRecyclerAdapter extends RecyclerView.Adapter<RankingRecycler
 
         public ViewHolder(View v) {
             super(v);
-            textViewRank = (TextView)v.findViewById(R.id.textViewRank);
-            textViewName = (TextView)v.findViewById(R.id.textViewName);
-            textViewTime = (TextView)v.findViewById(R.id.textViewTime);
-            linearLayout = (LinearLayout)v.findViewById(R.id.linearLayout);
+            textViewRank = (TextView) v.findViewById(R.id.textViewRank);
+            textViewName = (TextView) v.findViewById(R.id.textViewName);
+            textViewTime = (TextView) v.findViewById(R.id.textViewTime);
+            linearLayout = (LinearLayout) v.findViewById(R.id.linearLayout);
         }
     }
 }
