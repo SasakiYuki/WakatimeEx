@@ -7,6 +7,7 @@ public class UserListEntity {
     private int id;
     private String name;
     private String url;
+    private boolean isValidCheck;
 
     public int getId() {
         return id;
@@ -30,5 +31,13 @@ public class UserListEntity {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public boolean isValidCheck() {
+        return isValidCheck;
+    }
+
+    public void setValidCheck(boolean validCheck) {
+        isValidCheck = validCheck;
     }
 }
