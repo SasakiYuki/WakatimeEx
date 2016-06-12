@@ -1,9 +1,12 @@
 package com.wacode.yuki.wakatimeex.UI.Profile;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -27,46 +30,20 @@ import java.util.ArrayList;
  * Created by Riberd on 2016/05/30.
  */
 public class ProfileMainActivity extends AppCompatActivity{
+    private Boolean mIsValidButton;
+    public static final String KEY_INTENT_MODE = "key_intent_mode";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_main);
-
+        mIsValidButton = false;
         setViews();
-        setViewsEndFromSyncGet();
     }
 
     private void setViews(){
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolBar);
         LinearLayout linearLayout_follow = (LinearLayout)findViewById(R.id.linearLayout_follow);
         LinearLayout linearLayout_follower = (LinearLayout)findViewById(R.id.linearLayout_follower);
-
-        setSupportActionBar(toolbar);
-        final Drawable upArrow = getResources().getDrawable(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
-        upArrow.setColorFilter(getResources().getColor(R.color.colorWhite), PorterDuff.Mode.SRC_ATOP);
-        getSupportActionBar().setHomeAsUpIndicator(upArrow);
-        linearLayout_follow.setOnClickListener(OnClick);
-        linearLayout_follower.setOnClickListener(OnClick);
-    }
-
-    private View.OnClickListener OnClick = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            switch (v.getId()){
-                case R.id.linearLayout_follow:
-                    // TODO: 2016/05/30 intent followList
-                    break;
-                case R.id.linearLayout_follower:
-                    // TODO: 2016/05/30  intent followerList
-                    break;
-                case R.id.linerLayout_moreTeam:
-                    // TODO: 2016/05/30 intent AllTeamList
-                    break;
-            }
-        }
-    };
-
-    private void setViewsEndFromSyncGet(){
         ImageView imageViewIcon = (ImageView)findViewById(R.id.imageView_icon);
         TextView textViewUserName = (TextView)findViewById(R.id.textView_name);
         TextView textViewLocation = (TextView)findViewById(R.id.textView_location);
@@ -74,8 +51,18 @@ public class ProfileMainActivity extends AppCompatActivity{
         TextView textViewFollow = (TextView)findViewById(R.id.textView_follow);
         TextView textViewFollower = (TextView)findViewById(R.id.textView_follower);
         LinearLayout linearLayoutMoreTeams = (LinearLayout)findViewById(R.id.linerLayout_moreTeam);
+        LinearLayout linearLayoutFollowButton = (LinearLayout)findViewById(R.id.linearLayoutFollow);
 
-//        setIconFromUrl(imageViewIcon,url);
+
+        setSupportActionBar(toolbar);
+        final Drawable upArrow = getResources().getDrawable(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
+        upArrow.setColorFilter(getResources().getColor(R.color.colorWhite), PorterDuff.Mode.SRC_ATOP);
+        getSupportActionBar().setHomeAsUpIndicator(upArrow);
+        linearLayout_follow.setOnClickListener(OnClick);
+        linearLayout_follower.setOnClickListener(OnClick);
+        linearLayoutFollowButton.setOnClickListener(OnClick);
+
+        //        setIconFromUrl(imageViewIcon,url);
         textViewUserName.setText("名前");
         textViewLocation.setText("場所");
         textViewWebSite.setText("URL");
@@ -87,6 +74,31 @@ public class ProfileMainActivity extends AppCompatActivity{
 //            linearLayout_moreTeams.setOnClickListener(OnClick);
 //        }
     }
+
+    private View.OnClickListener OnClick = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent ;
+            switch (v.getId()){
+                case R.id.linearLayout_follow:
+                    intent = new Intent(ProfileMainActivity.this,FriendListActivity.class) ;
+                    intent.putExtra(KEY_INTENT_MODE,0);
+                    startActivity(intent);
+                    break;
+                case R.id.linearLayout_follower:
+                    intent = new Intent(ProfileMainActivity.this,FriendListActivity.class) ;
+                    intent.putExtra(KEY_INTENT_MODE,1);
+                    startActivity(intent);
+                    break;
+                case R.id.linerLayout_moreTeam:
+                    // TODO: 2016/05/30 intent AllTeamList
+                    break;
+                case R.id.linearLayoutFollow:
+                    changeFollowButton();
+                    break;
+            }
+        }
+    };
 
     private void setIconFromUrl(ImageView imageView, String url){
         RoundedTransformation transformation = new RoundedTransformation(15,0);
@@ -104,7 +116,33 @@ public class ProfileMainActivity extends AppCompatActivity{
                 //// TODO: 2016/05/30 intent TeamDetail
             }
         });
+    }
 
+    private void changeFollowButton(){
+        final LinearLayout linearLayoutFollow = (LinearLayout)findViewById(R.id.linearLayoutFollow);
+        final TextView textViewFollow = (TextView)findViewById(R.id.textViewFollow);
+        final ImageView imageViewFollow = (ImageView)findViewById(R.id.imageViewFollow);
+
+        if (!mIsValidButton){
+            linearLayoutFollow.setBackground(getResources().getDrawable(R.drawable.item_followed_icon));
+            textViewFollow.setText(R.string.profile_followed);
+            imageViewFollow.setImageResource(R.mipmap.ic_done_white_48dp);
+            mIsValidButton = true;
+        }else {
+            AlertDialog.Builder dialog = new AlertDialog.Builder(ProfileMainActivity.this);
+            dialog.setMessage(getResources().getText(R.string.profile_follow_message));
+            dialog.setNegativeButton("Cancel",null);
+            dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    linearLayoutFollow.setBackground(getResources().getDrawable(R.drawable.item_following_icon));
+                    textViewFollow.setText(R.string.profile_following);
+                    imageViewFollow.setImageResource(R.mipmap.ic_person_add_white_48dp);
+                    mIsValidButton = false;
+                }
+            });
+            dialog.show();
+        }
     }
 
     private ArrayList<TeamDataEntity> createTeamListFromApi(){

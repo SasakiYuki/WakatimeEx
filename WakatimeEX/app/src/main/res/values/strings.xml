@@ -12,6 +12,9 @@
     <string name="profile_follower">フォロワー</string>
     <string name="profile_joinTeam">参加チーム</string>
     <string name="profile_allTeam">チームを全て表示</string>
+    <string name="profile_following">フォローする</string>
+    <string name="profile_followed">フォロー中</string>
+    <string name="profile_follow_message">フォローを解除しますか？</string>
 
     <string name="oauth_text">Please OAuth</string>
     <string name="oauth_text2">Start OAuth</string>
@@ -28,6 +31,11 @@
     <string name="teamDetail_menu_approval">承認</string>
     <string name="teamDetail_menu_kick">キック</string>
     <string name="teamDetail_menu_dispersion">解散</string>
+    <string name="teamDetail_dialog_withdrawal">チームから脱退しますか？</string>
+    <string name="teamDetail_dialog_dispersion">チームを解散しますか？</string>
+
+    <string name="approve_dialog_message">承認しますか？</string>
+    <string name="deselect_dialog_message">キックしますか？</string>
 
     <string name="search_view_hint">ユーザー名、グループ名で探す</string>
 

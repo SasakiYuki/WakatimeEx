@@ -1,7 +1,10 @@
 package com.wacode.yuki.wakatimeex.UI.Team;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,14 +55,17 @@ public class UserRecyclerAdapter extends RecyclerView.Adapter<UserRecyclerAdapte
                 .memoryPolicy(MemoryPolicy.NO_CACHE).fit().centerCrop().into(holder.imageViewIcon);
         holder.textViewName.setText(item.getName());
         holder.linearLayoutUser.setOnClickListener(onClick);
+        holder.linearLayoutUser.setId(position);
     }
 
     private View.OnClickListener onClick = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-
+            // TODO: 2016/06/10 intent userProfile
         }
     };
+
+
 
     static class ViewHolder extends RecyclerView.ViewHolder{
         ImageView imageViewIcon;

@@ -1,15 +1,16 @@
 package com.wacode.yuki.wakatimeex.UI.Team;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.wacode.yuki.wakatimeex.R;
 
@@ -78,27 +79,56 @@ public class TeamMainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent;
         boolean result = true;
         switch (item.getItemId()) {
             case android.R.id.home:
                 finish();
                 break;
             case MENU_WITHDRAWAL:
-                //脱退
+                setExitTeamDialog();
                 break;
             case MENU_APPROVAL:
-                //承認
+                intent = new Intent(TeamMainActivity.this,ApproveUserActivity.class);
+                startActivity(intent);
                 break;
             case MENU_KICK:
-                //kick
+                intent = new Intent(TeamMainActivity.this,DeselectUserActivity.class);
+                startActivity(intent);
                 break;
             case MENU_DISPERSION:
-                //解散
+                setDisbandTeamDialog();
                 break;
             default:
                 result = super.onOptionsItemSelected(item);
         }
         return result;
+    }
+
+    private void setExitTeamDialog(){
+        AlertDialog.Builder dialog = new AlertDialog.Builder(TeamMainActivity.this);
+        dialog.setMessage(R.string.teamDetail_dialog_withdrawal);
+        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //exit team
+            }
+        });
+        dialog.setNegativeButton("Cancel",null);
+        dialog.show();
+    }
+
+    private void setDisbandTeamDialog(){
+        AlertDialog.Builder dialog = new AlertDialog.Builder(TeamMainActivity.this);
+        dialog.setMessage(R.string.teamDetail_dialog_dispersion);
+        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //disband team
+            }
+        });
+        dialog.setNegativeButton("Cancel",null);
+        dialog.show();
     }
 
     @Override
